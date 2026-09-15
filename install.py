@@ -15,7 +15,7 @@ import tempfile
 
 MODULE = 'liquid-glass-local'
 VERSION = '1.0.0'
-FILES = tuple('index.js index.css metadata.json spicetify-module.json icons.js icons.css light-mode.js surfaces.css oneui.css sakura.css coverage.css interaction-fixes.css iv-sakura.css player-contrast.css npv-contrast.css npv-details.css regression-contrast.css artist-page-contrast.css settings-contrast.css'.split())
+FILES = tuple('LICENSE index.js index.css metadata.json spicetify-module.json icons.js icons.css light-mode.js surfaces.css oneui.css sakura.css coverage.css interaction-fixes.css iv-sakura.css player-contrast.css npv-contrast.css npv-details.css regression-contrast.css artist-page-contrast.css settings-contrast.css'.split())
 
 
 def read_json(path):

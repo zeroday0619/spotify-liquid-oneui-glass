@@ -90,4 +90,6 @@ Visual checks on the verified configuration covered home, search, artist and alb
 
 This is an independent customization project and is not affiliated with Spotify, Apple, or Samsung. Product names describe compatibility and design inspiration.
 
-A distribution license has not yet been selected. Public availability alone does not grant permission to redistribute the source. A license should be added before the first public release.
+## License
+
+Licensed under the [MIT License](LICENSE). Copyright (c) 2026 Euiseo Cha.
