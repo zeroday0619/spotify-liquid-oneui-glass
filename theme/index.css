@@ -281,12 +281,12 @@ html.liquid-glass-local #ivLyrics-config-container:not([data-ui-theme="light"]) 
   --settings-divider: rgba(230, 240, 255, .12);
 }
 
-/* macOS-inspired typography and control states retain Spotify's layout metrics. */
+/* Native system fonts preserve platform typography without bundled font assets. */
 html.liquid-glass-local,
 html.liquid-glass-local .spotify-mix-non-latin {
-  --encore-body-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
-  --encore-title-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
-  --encore-variable-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
+  --encore-body-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", system-ui, "Noto Sans", "Liberation Sans", sans-serif !important;
+  --encore-title-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", system-ui, "Noto Sans", "Liberation Sans", sans-serif !important;
+  --encore-variable-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", system-ui, "Noto Sans", "Liberation Sans", sans-serif !important;
   --lg-accent: #a0d2ff;
   --lg-selection: rgba(112, 181, 248, .22);
   -webkit-font-smoothing: antialiased;
