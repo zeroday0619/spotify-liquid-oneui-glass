@@ -1,0 +1,82 @@
+/* Keep the lyric canvas independent from the light settings and control surfaces. */
+/* Artwork-backed lyrics use light ink independently of the surrounding light application. */
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-lyricsContainer-LyricsContainer {
+  --spice-text: #fff9fc;
+  --spice-rgb-text: 255, 249, 252;
+  --spice-subtext: #f4eaf0;
+  --spice-rgb-subtext: 244, 234, 240;
+  color: #fff9fc;
+}
+
+html.liquid-glass-local[data-lg-mode="light"] .ivlyrics-settings-modal-shell:has(#ivLyrics-config-container[data-ui-theme="light"]) {
+  background: var(--lg-popup-material) !important;
+  border-color: var(--lg-line) !important;
+  box-shadow: 0 24px 64px rgba(91, 37, 62, .20) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] #ivLyrics-config-container[data-ui-theme="light"] {
+  --settings-accent-rgb: 166, 46, 97;
+  --accent-primary: #a62e61;
+  --accent-primary-light: rgba(166, 46, 97, .12);
+  --accent-gradient: linear-gradient(180deg, rgba(193, 70, 120, .16), rgba(193, 70, 120, .04));
+  --accent-glow: rgba(166, 46, 97, .12);
+  --text-primary: #3e2633;
+  --text-secondary: #745462;
+  --text-tertiary: #80616f;
+  --settings-glass: rgba(255, 248, 251, .80);
+  --settings-glass-strong: rgba(255, 250, 252, .94);
+  --settings-glass-soft: rgba(255, 250, 252, .65);
+  --settings-glass-hover: #fffafd;
+  --settings-glass-active: rgba(193, 70, 120, .13);
+  --settings-border: rgba(151, 65, 102, .18);
+  --settings-border-strong: rgba(151, 65, 102, .28);
+  --settings-divider: rgba(151, 65, 102, .14);
+  --settings-section-surface: rgba(255, 253, 254, .70);
+  --settings-section-surface-hover: rgba(255, 253, 254, .92);
+  --settings-section-outline: rgba(151, 65, 102, .12);
+  --settings-row-divider: rgba(151, 65, 102, .12);
+  --settings-glass-blur: blur(8px);
+  --glass-bg: var(--settings-glass-soft);
+  --glass-bg-hover: var(--settings-glass-hover);
+  --glass-bg-active: var(--settings-glass-active);
+  --glass-border: var(--settings-border);
+  --glass-border-light: var(--settings-border-strong);
+  background: #fff7fa !important;
+  color: var(--text-primary);
+}
+html.liquid-glass-local[data-lg-mode="light"] #ivLyrics-config-container[data-ui-theme="light"] :is(.settings-main-panel, .settings-sidebar) {
+  background: transparent !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] #ivLyrics-config-container[data-ui-theme="light"] :is(input:not([type="checkbox"]):not([type="range"]):not([type="color"]), textarea, select, .config-select) {
+  background-color: #fffafd !important;
+  color: #3e2633 !important;
+  border-color: var(--settings-border-strong) !important;
+  caret-color: #a62e61;
+}
+html.liquid-glass-local[data-lg-mode="light"] #ivLyrics-config-container[data-ui-theme="light"] :is(input, textarea)::placeholder {
+  color: #80616f !important;
+  opacity: 1;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-config-button-container.lyrics-fluent-floating-toolbar {
+  --spice-text: #3e2633;
+  --spice-rgb-text: 62, 38, 51;
+  --spice-rgb-accent: 166, 46, 97;
+  background: rgba(255, 247, 250, .96) !important;
+  border-color: var(--lg-line) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-fluent-floating-toolbar :is(.lyrics-config-button, .lyrics-mode-button, .lyrics-floating-menu-toggle) {
+  color: #634250 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-fluent-floating-toolbar :is(.lyrics-config-button, .lyrics-mode-button, .lyrics-floating-menu-toggle):hover {
+  color: #3e2633 !important;
+  background: #f6e1eb !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-fluent-floating-toolbar :is(.lyrics-config-button[data-active="true"], .lyrics-config-button.active, .lyrics-mode-button.active) {
+  color: #8b2451 !important;
+  background: #f3d8e4 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lyrics-fluent-floating-toolbar :is(.lyrics-config-button, .lyrics-mode-button):disabled {
+  color: #927381 !important;
+  background: transparent !important;
+}

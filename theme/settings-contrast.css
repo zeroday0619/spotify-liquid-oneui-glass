@@ -1,0 +1,24 @@
+/* Settings helper Text components omit semantic colors and otherwise default to white. */
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --essential-subdued: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container
+  :is(.Vyn6sniGcz9bg9HOJZzK, .x-settings-firstColumnFlexCol) > .e-10860-text,
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container
+  :is(.cwy1KdOKBj86Emfp0gwR, .encore-internal-color-text-subdued) {
+  color: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container
+  :is(.Vyn6sniGcz9bg9HOJZzK, .x-settings-firstColumnFlexCol) > label.e-10860-text {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container
+  :is(.Vyn6sniGcz9bg9HOJZzK, .x-settings-firstColumnFlexCol, .cwy1KdOKBj86Emfp0gwR) a {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-container .x-settings-section > h2 {
+  color: var(--lg-surface-text);
+}

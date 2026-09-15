@@ -1,0 +1,85 @@
+/* Playlist curation and album release controls retain literal dark-theme colors. */
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  .playlist-playlist-sectionTitleWrapper,
+  .L1Cs6gLClLOwMvChpy88 .gdIaFYTscvm1_kDaj85i,
+  .playlist-playlist-findMoreButton,
+  .Vl3_0eFA2mixzEW7CvGd,
+  .Vl3_0eFA2mixzEW7CvGd:hover,
+  .Vl3_0eFA2mixzEW7CvGd:focus) {
+  color: var(--lg-surface-text) !important;
+  --text-base: var(--lg-surface-text);
+  --essential-base: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  .oI5arcZR7eLzKGZ3q9a_, .LozwrybIwr3b0qW4_JYo,
+  .Q31aCyKJVUBuAZjWKXAn, .QER9m0kE4opwsyPBWY_r) {
+  color: var(--lg-surface-subtext) !important;
+  --essential-base: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .FqXZ78rF1NbfyZ5y4FsK {
+  color: var(--lg-surface-text) !important;
+  background-color: var(--lg-field-material) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .FqXZ78rF1NbfyZ5y4FsK::placeholder {
+  color: var(--lg-surface-subtext) !important;
+  opacity: 1;
+}
+html.liquid-glass-local[data-lg-mode="light"] .FqXZ78rF1NbfyZ5y4FsK:focus-visible {
+  outline: 2px solid var(--lg-accent);
+  outline-offset: 2px;
+}
+html.liquid-glass-local[data-lg-mode="light"] .Vl3_0eFA2mixzEW7CvGd:is(:hover, :focus-visible) {
+  background-color: var(--lg-highlight) !important;
+}
+
+/* Artist biography dialogs keep a fixed black surface outside the route theme. */
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA {
+  background-color: var(--lg-popup-material) !important;
+  color: var(--lg-surface-text) !important;
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --essential-subdued: var(--lg-surface-subtext);
+  border: 1px solid var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA .f63290_X9qUuoTWsgjgL {
+  color: var(--lg-surface-text) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA :is(
+  .cUiTGlPUaQigkLufdFrq, .klxwLd3uOpmFyGzdneqC, .ao09z9gtxfNEQF5VdMgg,
+  .vF3SVlCaSQZXq1By2L35) {
+  color: var(--lg-surface-text) !important;
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA :is(
+  .HRgMsuTZ6y9XG4Ql8EzO, .Rj244UoOW9D2FKdNF04Q) {
+  background-color: var(--lg-field-material) !important;
+  color: var(--lg-surface-text) !important;
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA .cUiTGlPUaQigkLufdFrq a {
+  color: var(--lg-accent) !important;
+}
+/* Listener counts and attribution Text nodes declare their own foreground. */
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA :is(
+  .ao09z9gtxfNEQF5VdMgg, .klxwLd3uOpmFyGzdneqC) > :last-child,
+html.liquid-glass-local[data-lg-mode="light"] .hJvH07fYmldzyi7HBLPA .vF3SVlCaSQZXq1By2L35 > :last-child {
+  color: var(--lg-surface-subtext) !important;
+}
+
+/* Release metadata uses legacy Text colors rather than inherited Encore tokens. */
+html.liquid-glass-local[data-lg-mode="light"] .oMZqUHHf4LRyxP7gBZ6w > div > p,
+html.liquid-glass-local[data-lg-mode="light"] .HtziCvOin__QUreWCqJ4 > p {
+  color: var(--lg-surface-subtext) !important;
+}
+/* A stuck column header must occlude the rows scrolling beneath it. */
+html.liquid-glass-local[data-lg-mode="light"] .N87seVZ8Bw6xEsQPVwsj.KB1xjImp9AFi7u_IFqNt {
+  background: #fff3f7 !important;
+  border-bottom-color: rgba(100, 40, 65, .18) !important;
+  box-shadow: 0 -1px #fff3f7 !important;
+  color: var(--lg-surface-subtext);
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+}

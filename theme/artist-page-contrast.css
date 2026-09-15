@@ -1,0 +1,26 @@
+/* Artist-specific actions use literal white independently of Encore text tokens. */
+html.liquid-glass-local[data-lg-mode="light"] .IKMaGx7l2xX4YeeVKdKO,
+html.liquid-glass-local[data-lg-mode="light"] .IKMaGx7l2xX4YeeVKdKO .e-10860-text {
+  color: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .IKMaGx7l2xX4YeeVKdKO:is(:hover, :focus-visible),
+html.liquid-glass-local[data-lg-mode="light"] .IKMaGx7l2xX4YeeVKdKO:is(:hover, :focus-visible) .e-10860-text {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="saved-tracks-link"],
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="saved-tracks-link"]:is(:hover, :focus, :active) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .OyYTvoWjEkiMG_N_awpZ {
+  color: var(--lg-surface-subtext);
+}
+
+/* The artist content plane needs enough tint to occlude its stationary hero artwork. */
+html.liquid-glass-local[data-lg-mode="light"] .idQcRYCjAFYbKngo13bt:has(.meso6A3YDsyVEk5Au1Lg) {
+  background: rgba(255, 244, 249, .94);
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local[data-lg-mode="light"] .idQcRYCjAFYbKngo13bt:has(.meso6A3YDsyVEk5Au1Lg) {
+    background: #fff4f9;
+  }
+}

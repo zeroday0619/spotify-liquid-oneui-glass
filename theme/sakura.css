@@ -1,0 +1,120 @@
+/* Sakura uses warm pink materials and a deeper rose accent for legible controls. */
+html.liquid-glass-local[data-lg-mode] {
+  --background-base: #291d25;
+  --background-elevated-base: #3a2832;
+  --lg-glass: rgba(55, 36, 47, var(--lg-glass-alpha, .72));
+  --lg-surface: rgba(39, 27, 35, var(--lg-panel-alpha, .86));
+  --lg-surface-text: #fff1f5;
+  --lg-surface-subtext: #dcc1cc;
+  --lg-popup-material: rgba(51, 34, 44, .95);
+  --lg-content-plane: rgba(41, 29, 37, .78);
+  --lg-field-material: rgba(255, 193, 215, .09);
+  --lg-line: rgba(255, 204, 222, .22);
+  --lg-highlight: rgba(255, 174, 204, .12);
+  --lg-accent: #ffb4cf;
+  --lg-selection: rgba(236, 128, 169, .20);
+  --oneui-primary: #ae386b;
+  --oneui-primary-hover: #c0447b;
+  --oneui-primary-press: #972b59;
+  --oneui-card: rgba(255, 208, 225, .065);
+  --sakura-track: #332530;
+  --sakura-focus: #ffb4cf;
+}
+html.liquid-glass-local[data-lg-mode="light"] {
+  --background-base: #fff6fa;
+  --background-elevated-base: #fffafd;
+  --lg-glass: rgba(255, 243, 247, var(--lg-glass-alpha, .72));
+  --lg-surface: rgba(255, 248, 250, var(--lg-panel-alpha, .86));
+  --lg-surface-text: #3e2633;
+  --lg-surface-subtext: #745462;
+  --lg-popup-material: rgba(255, 247, 250, .96);
+  --lg-content-plane: rgba(255, 244, 249, .78);
+  --lg-field-material: rgba(158, 60, 101, .065);
+  --lg-line: rgba(151, 65, 102, .18);
+  --lg-highlight: rgba(170, 58, 105, .08);
+  --lg-accent: #a62e61;
+  --lg-selection: rgba(193, 70, 120, .13);
+  --oneui-primary: #af3568;
+  --oneui-primary-hover: #9b2c5a;
+  --oneui-primary-press: #842349;
+  --oneui-card: rgba(255, 253, 254, .64);
+  --sakura-track: #f5dfe9;
+  --sakura-focus: #a62e61;
+}
+html.liquid-glass-local[data-lg-mode] .Root__top-container {
+  background: radial-gradient(ellipse at 8% 0%, rgba(139, 76, 108, .27), transparent 62%),
+    radial-gradient(ellipse at 100% 90%, rgba(174, 93, 114, .13), transparent 65%), #261c24;
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__top-container {
+  background: radial-gradient(ellipse at 0% 0%, rgba(255, 207, 224, .72), transparent 64%),
+    radial-gradient(ellipse at 100% 95%, rgba(250, 221, 226, .52), transparent 62%), #fff7fa;
+}
+html.liquid-glass-local[data-lg-mode],
+html.liquid-glass-local[data-lg-mode] :is(.encore-base-set, .encore-app-frame-set) {
+  --text-bright-accent: var(--lg-accent);
+  --essential-bright-accent: var(--lg-accent);
+  --text-positive: var(--lg-accent);
+  --essential-positive: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode] .encore-bright-accent-set {
+  --background-base: var(--oneui-primary);
+  --background-highlight: var(--oneui-primary-hover);
+  --background-press: var(--oneui-primary-press);
+  --text-base: #fff;
+  --essential-base: #fff;
+}
+html.liquid-glass-local[data-lg-mode] :is(.bQetA_KiP9n0DQVcGa7m,
+  .main-globalNav-navLink, .main-topBar-searchBar, .main-nowPlayingBar-container) {
+  background: linear-gradient(145deg, rgba(255,224,236,.09), transparent 55%), var(--lg-glass);
+}
+html.liquid-glass-local[data-lg-mode] :is(.main-contextMenu-menu,
+  .e-10860-popover, .e-10860-legacy-popover, .main-playlistEditDetailsModal-container,
+  .main-trackCreditsModalV2-container, .e-10860-dialog-alert, .e-10860-dialog-confirmation,
+  .spicetify-dialog, .spicetify-manager-fallback,
+  .spicetify-store-panel:not(.spicetify-store-panel--anchored)) {
+  background: var(--lg-popup-material);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode] .main-topBar-background { background: var(--lg-popup-material) !important; }
+html.liquid-glass-local[data-lg-mode] .idQcRYCjAFYbKngo13bt { background: var(--lg-content-plane); }
+html.liquid-glass-local[data-lg-mode="light"] .playlist-playlist-actionBarBackground-background {
+  background: linear-gradient(rgba(255,243,248,.88), transparent) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog {
+  background: linear-gradient(rgba(255,246,250,.6), rgba(255,246,250,.6)), var(--lg-glass);
+}
+html.liquid-glass-local[data-lg-mode] :is(.lg-settings-dialog select, .main-dropDown-dropDown) {
+  background: var(--sakura-track);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode] .main-contextMenu-menu .main-contextMenu-menuItemButton:is(:hover, :focus-visible, [aria-expanded="true"]) {
+  background: var(--oneui-primary);
+  color: #fff;
+}
+html.liquid-glass-local[data-lg-mode] :is(.spicetify-route-page, .spicetify-panel-host,
+  .spicetify-dialog, .spicetify-popover-menu, .spicetify-store-panel) {
+  --spice-button: var(--oneui-primary);
+  --spice-button-active: var(--oneui-primary-hover);
+  --spice-rgb-button: 175,53,104;
+  --spice-text: var(--lg-surface-text);
+  --spice-subtext: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode] .OjAZ1Rnt5EpGTiBqGLg2 .main-trackList-rowMainContentTitle,
+html.liquid-glass-local[data-lg-mode] .main-genericButton-button.ZfsMQKTLl695iPvUo3GK {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode] .main-genericButton-button.ILKsNjdYE78SEyfujte1:after {
+  background: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode] :is(.progress-bar, .main-nowPlayingBar-container .progress-bar) {
+  --is-active-fg-color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode] :is(button, a, input, select, [role="button"]):focus-visible {
+  outline-color: var(--sakura-focus);
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local[data-lg-mode] { --lg-glass: #37242f; --lg-surface: #271b23; --lg-content-plane: #291d25; }
+  html.liquid-glass-local[data-lg-mode="light"] { --lg-glass: #fff3f7; --lg-surface: #fff8fa; --lg-content-plane: #fff4f9; }
+}
+
+html.liquid-glass-local { color-scheme: light !important; }

@@ -1,0 +1,36 @@
+# Operating systems and editors.
+.DS_Store
+._*
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local dependencies, tests, and generated artifacts.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.coverage
+htmlcov/
+.pytest_cache/
+dist/
+build/
+*.zip
+
+# Private configuration and runtime files do not belong in the theme.
+.env
+.env.*
+!.env.example
+config.toml
+config-xpui.ini
+vault.json
+daemon-token
+*.log
+*.lock
+backups/
+*.bak
+*.backup
+.install-state.json

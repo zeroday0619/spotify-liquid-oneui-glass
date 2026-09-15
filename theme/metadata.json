@@ -1,0 +1,13 @@
+{
+  "name": "liquid-glass-local",
+  "kind": "theme",
+  "version": "1.0.0",
+  "description": "Liquid One UI Glass: One UI styling with Liquid Glass materials for Spotify and ivLyrics.",
+  "entries": {
+    "js": "index.js",
+    "css": "index.css"
+  },
+  "dependencies": {
+    "stdlib": "*"
+  }
+}

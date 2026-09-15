@@ -1,0 +1,109 @@
+/* Search suggestions use independent row palettes instead of the app frame tokens. */
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="search-dropdown"] {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --essential-subdued: var(--lg-surface-subtext);
+  --background-elevated-highlight: var(--lg-popup-material);
+  --background-tinted-base: var(--lg-field-material);
+  --background-tinted-highlight: var(--lg-highlight);
+}
+html.liquid-glass-local[data-lg-mode="light"] .nQNDoLQu7Gplkrpjy2DU {
+  background: var(--lg-popup-material);
+  border: 1px solid var(--lg-line);
+  border-radius: 20px;
+  box-shadow: var(--lg-edge), var(--lg-shadow);
+  backdrop-filter: var(--lg-blur);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  [data-testid="search-dropdown"], .XdQ4RlpghvlB2j1YwPGT, .WUyH2l6WfSGkodrUfbFs)
+  :is(.e-10860-legacy-list-row__column, .e-10860-list-row-text-group) {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  [data-testid="search-dropdown"], .XdQ4RlpghvlB2j1YwPGT, .WUyH2l6WfSGkodrUfbFs)
+  :is(.e-10860-legacy-list-row-title, .e-10860-legacy-list-row-title a,
+    .e-10860-legacy-list-row-title .encore-internal-color-text-base,
+    .AiIIeyfwANVuS8HvKrrr, .AiIIeyfwANVuS8HvKrrr .e-10860-text) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="search-dropdown"]
+  .J4NLA80g8bErENuKmf7s .r1lTOc12YMTXdR2WL2Dr {
+  --background-tinted-base: var(--lg-field-material);
+  --encore-image-background-color: var(--lg-field-material);
+  --encore-image-color: var(--lg-accent);
+  background-color: var(--lg-field-material);
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="search-dropdown"]
+  :is(.xgdYmYdBm4tX417Qud1n:hover, .MT4GoCM_phPDXN83OthM)::after {
+  background-color: var(--lg-highlight);
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="search-dropdown"] .T8TE9x_WUzsbeLOaDwQ4 {
+  outline: 2px solid var(--lg-accent);
+  outline-offset: 2px;
+}
+
+/* Legacy search variants also keep fixed white text and charcoal hover fills. */
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  .IO4nD9sDK5smS118AiAg, .lwVWH6TQ09DJB0vUXka7, .P14uhBkilVUReGVr6OLo,
+  .faXUnnKnzQ7dRS_Yk2Mk, .nvBWZST40_5Er609jZjG, .cqf4RWXHscEdNX4bsghe) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(
+  .fCiJkgc7uSTle89Kgaja, .tVkUpDww41yC6h3Nxp1V, .kzEb_UKKIRPf_ViWFBx5):is(:hover, :focus-within),
+html.liquid-glass-local[data-lg-mode="light"] .kzEb_UKKIRPf_ViWFBx5.pw_Veo4p6on8oT_NUKQQ {
+  background: var(--lg-highlight);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.XYPXPNZ2r7v6u0RAZb3z, .ukMEZf9IDj63vzFcqkRm) {
+  background: var(--lg-field-material);
+  color: var(--lg-surface-subtext);
+}
+
+/* Disabled items must not inherit the enabled hover and keyboard focus treatment. */
+html.liquid-glass-local[data-lg-mode="light"] .main-contextMenu-menu
+  .main-contextMenu-menuItemButton:is(:hover, :focus, :focus-visible, [aria-expanded="true"]):not(.l7XabbfpobRNm8SpemYx):not([aria-disabled="true"]):not(:disabled) {
+  --text-base: #fff;
+  --text-subdued: rgba(255, 255, 255, .88);
+  --essential-base: #fff;
+  --essential-subdued: rgba(255, 255, 255, .88);
+  background: var(--oneui-primary);
+  color: #fff;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-contextMenu-menu
+  .main-contextMenu-menuItemButton:is(.l7XabbfpobRNm8SpemYx, [aria-disabled="true"], :disabled),
+html.liquid-glass-local[data-lg-mode="light"] .main-contextMenu-menu
+  .main-contextMenu-menuItemButton:is(.l7XabbfpobRNm8SpemYx, [aria-disabled="true"], :disabled):is(:hover, :focus, :active) {
+  --text-base: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-subtext);
+  background: transparent;
+  color: var(--lg-surface-subtext);
+  opacity: .5;
+}
+
+/* Spotify's custom scrollbar handles stay white even after switching to light mode. */
+html.liquid-glass-local[data-lg-mode="light"] .os-theme-spotify.os-scrollbar {
+  --os-handle-bg: rgba(151, 65, 102, .30);
+  --os-handle-bg-hover: rgba(151, 65, 102, .48);
+  --os-handle-bg-active: rgba(151, 65, 102, .64);
+}
+html.liquid-glass-local[data-lg-mode="light"] .sXUIE1EoXTTmcD3tlYyN {
+  color: var(--lg-surface-subtext);
+}
+
+/* Edit-dialog keyboard controls retain contrast when the input reveals its label. */
+html.liquid-glass-local[data-lg-mode="light"] .main-playlistEditDetailsModal-descriptionTextarea:focus-visible {
+  outline: 2px solid var(--lg-accent);
+  outline-offset: 3px;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-playlistEditDetailsModal-insertLinkButton,
+html.liquid-glass-local[data-lg-mode="light"] .main-playlistEditDetailsModal-insertLinkButton:is(:hover, :focus, :active) {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-playlistEditDetailsModal-characterCounter {
+  background-color: var(--oneui-primary);
+  color: #fff;
+}

@@ -1,0 +1,16 @@
+/* Metadata has a light surface even when the media advertises an over-media color set. */
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-contextItemInfo {
+  --text-base: #3e2633;
+  --text-subdued: #745462;
+  --essential-base: #513441;
+  color: #3e2633 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-contextItemInfo :is([data-testid="context-item-info-title"], [data-testid="context-item-info-title"] a) {
+  color: #3e2633 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-contextItemInfo :is([data-testid="context-item-info-subtitles"], [data-testid="context-item-info-subtitles"] a) {
+  color: #745462 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-contextItemInfo button {
+  color: #965070 !important;
+}

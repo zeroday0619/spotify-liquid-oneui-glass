@@ -1,0 +1,99 @@
+/* Artist biography text sits below the artwork except in the full-bleed variant. */
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .aN6RjOsDo5DSOGDMRF2G:not(.GVJkUN08jH1Dv9gdrrEw),
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .lAkcLkyoKzLJMLbnN8_s:not(.xXhZZF68gM285tfyXHBA),
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  :is(.xjtJh3fBlistN0It9RnM, .main-nowPlayingView-queue, .Q2Xdv0zLiX8Clnjx4NTs) {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --essential-subdued: var(--lg-surface-subtext);
+  --background-tinted-highlight: var(--lg-highlight);
+  --background-tinted-press: var(--lg-selection);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .aN6RjOsDo5DSOGDMRF2G:not(.GVJkUN08jH1Dv9gdrrEw) {
+  background-color: var(--oneui-card);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .aN6RjOsDo5DSOGDMRF2G:not(.GVJkUN08jH1Dv9gdrrEw)
+  :is([data-testid="npv-artist-link"], [data-testid="npv-artist-link"] span, .sG_6rde7Tva3hp31V9TV),
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .lAkcLkyoKzLJMLbnN8_s:not(.xXhZZF68gM285tfyXHBA) :is(h2, .WPlsBQxYm4rrt5wNJvi4) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .aN6RjOsDo5DSOGDMRF2G:not(.GVJkUN08jH1Dv9gdrrEw)
+  :is(.mElgCI6ydY6wVjYafDDQ, .uBQMv79X49H5pTc6e2g2, .uBQMv79X49H5pTc6e2g2 a) {
+  color: var(--lg-surface-subtext);
+}
+
+/* Concert dates and venue metadata have their own fixed dark-theme foregrounds. */
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Nn9K90s4j87sjhQ5qPF7 {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --background-tinted-highlight: var(--lg-highlight);
+  --background-tinted-press: var(--lg-selection);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Nn9K90s4j87sjhQ5qPF7
+  .main-nowPlayingView-onTourTimeCard {
+  background: var(--lg-field-material);
+  border: 1px solid var(--lg-line);
+  border-radius: 12px;
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Nn9K90s4j87sjhQ5qPF7
+  :is(.JNjRHnVgMCInLu6PWlwS, .main-nowPlayingView-onTourTimeDate, .main-nowPlayingView-onTourItemTitle) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Nn9K90s4j87sjhQ5qPF7
+  :is(.main-nowPlayingView-onTourItemTime, .qthyPpbm0UzrKdDOe5be) {
+  color: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Nn9K90s4j87sjhQ5qPF7 .EFu7QCCReIocQ2jRerNE {
+  color: var(--lg-accent);
+}
+
+/* Credits and queue descriptions render default white Text components without semantic colors. */
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .xjtJh3fBlistN0It9RnM :is(h2, .e-10860-text, .o7GZ4zio8cWHM0YQWmdT) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .xjtJh3fBlistN0It9RnM :is([data-encore-id="listRowSubtitle"], [id^="listrow-subtitle-"], .encore-internal-color-text-subdued),
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  .main-nowPlayingView-queue > .e-10860-text,
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .Q2Xdv0zLiX8Clnjx4NTs > p {
+  color: var(--lg-surface-subtext);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  :is(.main-nowPlayingView-creditsShowAll, .main-nowPlayingView-openQueue) {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar
+  :is(.main-nowPlayingView-creditsShowAll, .main-nowPlayingView-openQueue):is(:hover, :focus-visible) {
+  color: var(--oneui-primary-hover);
+}
+
+/* Related-video labels occupy text columns outside their image playback overlays. */
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .VEeolOOHNUSevAPllYgI
+  :is(.e-10860-legacy-list-row__column, .e-10860-card__column) {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .VEeolOOHNUSevAPllYgI
+  :is(.e-10860-legacy-list-row__column, .e-10860-card__column)
+  :is(.e-10860-text, .e-10860-link, .encore-internal-color-text-base) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .VEeolOOHNUSevAPllYgI
+  :is(.e-10860-legacy-list-row__column, .e-10860-card__column)
+  :is([data-encore-id="listRowSubtitle"], [id^="listrow-subtitle-"], [data-encore-id="cardSubtitle"], .encore-internal-color-text-subdued),
+html.liquid-glass-local[data-lg-mode="light"] .Root__right-sidebar .VEeolOOHNUSevAPllYgI
+  :is(.e-10860-legacy-list-row__column, .e-10860-card__column)
+  :is([data-encore-id="listRowSubtitle"], [id^="listrow-subtitle-"], [data-encore-id="cardSubtitle"]) a {
+  color: var(--lg-surface-subtext);
+}

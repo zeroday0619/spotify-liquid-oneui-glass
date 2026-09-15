@@ -1,0 +1,92 @@
+/* The current player mounts outside the legacy now-playing container. */
+html.liquid-glass-local[data-lg-mode="light"] :is(.itzKVxWhS4n59fp_KIVc, [data-testid="now-playing-bar"]) {
+  --text-base: #513441;
+  --text-subdued: #745462;
+  --text-bright-accent: #965070;
+  --essential-base: #513441;
+  --essential-subdued: #745462;
+  --essential-bright-accent: #965070;
+  color: #513441;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] {
+  background: rgba(255, 245, 249, .94) !important;
+  border-top: 1px solid rgba(100, 40, 65, .16);
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  [data-testid="now-playing-widget"], [data-testid="now-playing-widget-v2"],
+  [data-testid="player-controls"], [data-testid="general-controls"]) {
+  --text-base: #513441;
+  --text-subdued: #745462;
+  --essential-base: #513441;
+  --essential-subdued: #745462;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  [data-testid="playback-position"], [data-testid="playback-duration"],
+  .main-trackInfo-artists, .main-trackInfo-artists a,
+  [data-testid="context-item-info-subtitles"], [data-testid="context-item-info-subtitles"] a) {
+  color: #745462 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  .main-trackInfo-name, .main-trackInfo-name a, [data-testid="context-item-link"],
+  [data-testid="context-item-info-title"], [data-testid="context-item-info-title"] a) {
+  color: #513441 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  .main-genericButton-button, [data-testid^="control-button-"]):not([data-testid="control-button-playpause"]) {
+  color: #513441 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  .main-genericButton-button, [data-testid^="control-button-"]):not([data-testid="control-button-playpause"]):is(
+  :hover, :focus-visible, [aria-checked="true"], [aria-pressed="true"], .ZfsMQKTLl695iPvUo3GK) {
+  color: #965070 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] .main-genericButton-button.ILKsNjdYE78SEyfujte1::after {
+  background-color: #965070 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] [data-testid="control-button-playpause"] {
+  --background-base: #965070;
+  --background-highlight: #83415e;
+  --text-base: #fff;
+  --essential-base: #fff;
+  background-color: #965070 !important;
+  color: #fff !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] [data-testid="control-button-playpause"]:is(:hover, :focus-visible) {
+  background-color: #83415e !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  .main-genericButton-button, [data-testid^="control-button-"]):is(:disabled, [aria-disabled="true"]) {
+  opacity: .45 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] :is(
+  .main-genericButton-button, [data-testid^="control-button-"]):not([data-testid="control-button-playpause"]):is(:disabled, [aria-disabled="true"]) {
+  color: #745462 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] .progress-bar {
+  --bg-color: rgba(100, 40, 65, .25) !important;
+  --mg-color: rgba(100, 40, 65, .45) !important;
+  --fg-color: #965070 !important;
+  --is-active-fg-color: #83415e !important;
+}
+
+/* Encore icons and filled-button inner spans carry independent color sets. */
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] button:not([data-testid="control-button-playpause"]) svg {
+  color: #513441 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] button:not([data-testid="control-button-playpause"]):is(
+  :hover, :focus-visible, [aria-checked="true"], [aria-pressed="true"], .ZfsMQKTLl695iPvUo3GK) svg {
+  color: #965070 !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] [data-testid="control-button-playpause"] > span {
+  background-color: #965070 !important;
+  color: #fff !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] [data-testid="control-button-playpause"] svg {
+  color: #fff !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] [data-testid="control-button-playpause"]:is(:hover, :focus-visible) > span {
+  background-color: #83415e !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] [data-testid="now-playing-bar"] button:not([data-testid="control-button-playpause"]):is(:disabled, [aria-disabled="true"]) svg {
+  color: #745462 !important;
+}

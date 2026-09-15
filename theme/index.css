@@ -1,0 +1,715 @@
+@import url("/modules/liquid-glass-local/icons.css");
+@import url("/modules/liquid-glass-local/surfaces.css");
+
+/* Glass belongs to navigation and controls; content keeps a quiet material. */
+html.liquid-glass-local {
+  --lg-glass: rgba(35, 38, 44, var(--lg-glass-alpha, .72));
+  --lg-line: rgba(235, 241, 250, .22);
+  --lg-edge: inset 0 1px 0 rgba(255, 255, 255, .19), inset 0 -1px 0 rgba(255, 255, 255, .06);
+  --lg-shadow: 0 5px 18px rgba(0, 0, 0, .16);
+  --lg-blur: blur(8px) saturate(110%);
+  --lg-surface: rgba(27, 29, 34, var(--lg-panel-alpha, .86));
+  --lg-highlight: rgba(207, 226, 250, .12);
+}
+
+html.liquid-glass-local .Root__top-container {
+  background: radial-gradient(ellipse at 15% 0%, rgba(127, 137, 151, .18), transparent 65%),
+    radial-gradient(ellipse at 100% 100%, rgba(115, 109, 102, .08), transparent 65%), #202226;
+}
+
+/* Spotify 1.3.0 gives the global navigation its own opaque black background. */
+html.liquid-glass-local .bQetA_KiP9n0DQVcGa7m {
+  background: linear-gradient(110deg, rgba(108, 126, 144, .13), rgba(108, 116, 140, .05)), var(--lg-glass);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), inset 0 -1px 0 var(--lg-line);
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local .bQetA_KiP9n0DQVcGa7m {
+    background: #263140;
+  }
+}
+
+html.liquid-glass-local .Root__main-view {
+  background: var(--lg-surface);
+  border-radius: 16px;
+  box-shadow: inset 0 0 0 1px rgba(224, 236, 255, .09);
+}
+
+html.liquid-glass-local .main-yourLibraryX-entryPoints {
+  background: var(--lg-glass);
+  border-radius: 0;
+  box-shadow: inset -1px 0 0 rgba(225, 237, 250, .13);
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+
+html.liquid-glass-local .main-yourLibraryX-libraryContainer,
+html.liquid-glass-local .main-yourLibraryX-library {
+  background-color: transparent;
+}
+
+html.liquid-glass-local .main-yourLibraryX-libraryContainer {
+  background: transparent !important;
+}
+
+html.liquid-glass-local .main-nowPlayingView-mainWrapper {
+  --background-base: transparent;
+  background: transparent !important;
+  border-radius: 0;
+}
+
+html.liquid-glass-local .Root__right-sidebar {
+  border-radius: 0;
+  background: var(--lg-surface);
+  box-shadow: inset 0 0 0 1px rgba(224, 236, 255, .09);
+}
+
+html.liquid-glass-local .main-globalNav-navLink,
+html.liquid-glass-local .main-topBar-searchBar,
+html.liquid-glass-local .main-nowPlayingBar-container,
+html.liquid-glass-local .lyrics-config-button-container {
+  background: linear-gradient(145deg, rgba(241, 247, 255, .10), rgba(255, 255, 255, .015) 50%), var(--lg-glass);
+  box-shadow: var(--lg-edge), var(--lg-shadow), inset 0 0 0 1px var(--lg-line);
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+
+html.liquid-glass-local .main-topBar-searchBar {
+  border-radius: 999px;
+  color: #f4f7fb;
+}
+
+html.liquid-glass-local .main-nowPlayingBar-container {
+  border-radius: 16px;
+  border-top-color: transparent;
+}
+
+html.liquid-glass-local .main-nowPlayingBar-nowPlayingBar {
+  background: transparent;
+}
+
+html.liquid-glass-local .lyrics-config-button-container {
+  /* ivLyrics injects its own important appearance rules after module styles. */
+  border-radius: 24px !important;
+  border: 1px solid var(--lg-line) !important;
+  background: var(--lg-glass) !important;
+  box-shadow: var(--lg-edge), var(--lg-shadow) !important;
+}
+
+/* The main view must not establish a containing block for fixed lyric controls. */
+html.liquid-glass-local .main-card-cardContainer {
+  border-radius: 16px;
+  transition: background-color 160ms ease, box-shadow 160ms ease;
+}
+
+html.liquid-glass-local .main-card-cardContainer:hover,
+html.liquid-glass-local .main-trackList-trackListRow:hover,
+html.liquid-glass-local .main-yourLibraryX-listItem:hover {
+  background-color: var(--lg-highlight);
+}
+
+html.liquid-glass-local .main-globalNav-navLink:hover {
+  background-color: rgba(85, 104, 127, .80);
+}
+
+html.liquid-glass-local :is(button, a, input, [role="button"]):focus-visible {
+  outline: 2px solid #b8dcff;
+  outline-offset: 3px;
+}
+
+html.liquid-glass-local .main-topBar-searchBar::placeholder {
+  color: #c8d2df;
+}
+
+html.liquid-glass-local .main-yourLibraryX-listItem[aria-selected="true"] {
+  font-weight: 600;
+  background-color: rgba(222, 232, 246, .15);
+}
+
+html.liquid-glass-local .main-globalNav-navLink {
+  transition: scale 180ms cubic-bezier(.2, .8, .2, 1), background-color 160ms ease;
+}
+
+html.liquid-glass-local .main-globalNav-navLink:active {
+  scale: .96;
+}
+
+html.liquid-glass-local .lg-settings-dialog {
+  width: min(420px, calc(100vw - 40px));
+  margin: auto;
+  padding: 28px;
+  color: #f5f7fb;
+  color-scheme: dark;
+  background: linear-gradient(145deg, rgba(255,255,255,.055), transparent), var(--lg-glass);
+  border: 1px solid var(--lg-line);
+  border-radius: 24px;
+  box-shadow: var(--lg-edge), 0 24px 80px rgba(0,0,0,.4);
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+
+html.liquid-glass-local .lg-settings-dialog::backdrop {
+  background: rgba(0, 0, 0, .45);
+}
+
+html.liquid-glass-local .lg-settings-dialog h2 { font-size: 22px; margin: 0 0 12px; }
+html.liquid-glass-local .lg-settings-dialog p { color: #d5dde8; line-height: 1.6; margin: 0 0 24px; }
+html.liquid-glass-local .lg-settings-dialog label { display: block; font-weight: 600; margin-bottom: 14px; }
+html.liquid-glass-local .lg-settings-dialog input[type="range"] { width: 100%; accent-color: #c0ddfa; }
+html.liquid-glass-local .lg-settings-dialog output { display: block; color: #e1eaf5; margin: 12px 0 24px; }
+html.liquid-glass-local .lg-settings-dialog button {
+  display: block; margin-left: auto; padding: 10px 22px;
+  background: #d7e9fc; color: #172434; border: 0; border-radius: 999px; font-weight: 600;
+}
+
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local {
+    --lg-glass: #263140;
+    --lg-surface: #141c28;
+    --lg-line: rgba(235, 245, 255, .45);
+    --lg-blur: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.liquid-glass-local .main-card-cardContainer {
+    transition: none;
+  }
+  html.liquid-glass-local .main-globalNav-navLink { transition: none; scale: 1; }
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  html.liquid-glass-local { --lg-glass: #263140; }
+}
+
+/* Native base sets must not paint opaque surfaces over the theme material. */
+html.liquid-glass-local .PIP22o58Crv8RXY4wB2o,
+html.liquid-glass-local .itzKVxWhS4n59fp_KIVc {
+  background-color: transparent;
+}
+
+html.liquid-glass-local #Desktop_PanelContainer_Id,
+html.liquid-glass-local #Desktop_PanelContainer_Id::before,
+html.liquid-glass-local [data-npv-root] {
+  background: transparent !important;
+}
+
+html.liquid-glass-local .encore-dark-theme,
+html.liquid-glass-local .encore-dark-theme .encore-base-set {
+  --background-base: transparent;
+  --background-highlight: rgba(229, 237, 250, .10);
+  --background-press: rgba(229, 237, 250, .16);
+  --background-elevated-base: rgba(57, 66, 80, .78);
+  --background-elevated-highlight: rgba(80, 91, 109, .85);
+  --background-elevated-press: rgba(43, 51, 64, .90);
+  --background-tinted-base: rgba(226, 238, 255, .08);
+  --background-tinted-highlight: rgba(226, 238, 255, .15);
+  --background-tinted-press: rgba(226, 238, 255, .20);
+}
+
+html.liquid-glass-local .main-yourLibraryX-entryPoints {
+  background: var(--lg-glass) !important;
+}
+html.liquid-glass-local .main-yourLibraryX-library,
+html.liquid-glass-local .Root__right-sidebar > div,
+html.liquid-glass-local .main-nowPlayingView-panel,
+html.liquid-glass-local .main-nowPlayingView-queue {
+  background-color: transparent !important;
+}
+
+html.liquid-glass-local .main-topBar-background { background: var(--lg-glass); }
+html.liquid-glass-local .main-topBar-overlay { background: rgba(24, 32, 44, .12); }
+
+html.liquid-glass-local :is(.main-contextMenu-menu,
+  .e-10860-popover, .e-10860-legacy-popover,
+  .main-playlistEditDetailsModal-container, .main-trackCreditsModalV2-container,
+  .e-10860-dialog-alert, .e-10860-dialog-confirmation, .e-10860-dialog-full-screen,
+  .spicetify-dialog, .spicetify-manager-fallback,
+  .spicetify-store-panel:not(.spicetify-store-panel--anchored),
+  .fullscreen-playlist-popover, .song-info-modal, .ivlyrics-cache-edit-modal,
+  .lyrics-creator-profile-modal) {
+  background: linear-gradient(rgba(28, 34, 44, .72), rgba(28, 34, 44, .72)), var(--lg-glass);
+  border: 1px solid var(--lg-line);
+  border-radius: 18px;
+  color: #f4f7fb;
+  box-shadow: var(--lg-edge), var(--lg-shadow);
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+
+html.liquid-glass-local :is(.main-contextMenu-menuItemButton,
+  .main-trackList-trackListRow, .main-yourLibraryX-listItem) { border-radius: 8px; }
+
+html.liquid-glass-local :is(.main-contextMenu-menuItemButton:hover,
+  .main-contextMenu-menuItemButton:focus,
+  .main-trackList-trackListRow[aria-selected="true"]) { background: var(--lg-highlight); }
+
+html.liquid-glass-local :is(.e-10860-tooltip, .e-10860-legacy-tooltip, .lyrics-tooltip-wrapper) {
+  background: #303b4b; color: #f6f8fc; border-radius: 10px;
+  box-shadow: var(--lg-shadow);
+}
+
+html.liquid-glass-local :is(.spicetify-store-page, .spicetify-manager-page) {
+  --spice-main: #172230; --spice-card: rgba(227, 237, 253, .055);
+  --spice-text: #f4f7fb; --spice-subtext: #c6d1df;
+  background: transparent; color: #f4f7fb;
+}
+html.liquid-glass-local :is(.spicetify-store-card, .spicetify-manager-module, .x-settings-section) {
+  border-radius: 14px;
+  background: rgba(227, 237, 253, .045);
+  box-shadow: inset 0 0 0 1px rgba(227, 237, 253, .08);
+}
+html.liquid-glass-local :is(.spicetify-searchbar, .spicetify-select) {
+  background: var(--lg-glass); color: #f5f7fb; border-color: var(--lg-line); border-radius: 12px;
+}
+
+/* Honor ivLyrics light mode; its dark settings use the shared material tokens. */
+html.liquid-glass-local .ivlyrics-settings-modal-shell:has(#ivLyrics-config-container:not([data-ui-theme="light"])) {
+  background: var(--lg-glass) !important;
+  border: 1px solid var(--lg-line) !important;
+  border-radius: 22px !important;
+  backdrop-filter: var(--lg-blur);
+}
+html.liquid-glass-local #ivLyrics-config-container:not([data-ui-theme="light"]) {
+  --settings-page: transparent;
+  --settings-sidebar-surface: rgba(30, 39, 52, .35);
+  --settings-surface-1: rgba(235, 242, 255, .065);
+  --settings-surface-2: rgba(235, 242, 255, .10);
+  --settings-muted-surface: rgba(235, 242, 255, .045);
+  --settings-border: var(--lg-line);
+  --settings-border-strong: rgba(230, 240, 255, .3);
+  --settings-divider: rgba(230, 240, 255, .12);
+}
+
+/* macOS-inspired typography and control states retain Spotify's layout metrics. */
+html.liquid-glass-local,
+html.liquid-glass-local .spotify-mix-non-latin {
+  --encore-body-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
+  --encore-title-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
+  --encore-variable-font-stack: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif !important;
+  --lg-accent: #a0d2ff;
+  --lg-selection: rgba(112, 181, 248, .22);
+  -webkit-font-smoothing: antialiased;
+}
+
+html.liquid-glass-local :is(.encore-dark-theme, .encore-base-set) {
+  --text-bright-accent: #a0d2ff;
+  --essential-bright-accent: #a0d2ff;
+  --background-highlight: rgba(232, 240, 255, .12);
+}
+
+html.liquid-glass-local .encore-bright-accent-set {
+  --background-base: #bedfff;
+  --background-highlight: #d4eaff;
+  --background-press: #9ac7f2;
+  --text-base: #102c44;
+  --essential-base: #102c44;
+}
+
+html.liquid-glass-local :is(.main-trackList-trackListHeaderRow, .x-settings-section h2) {
+  color: #d7e2f0;
+  border-bottom-color: rgba(222, 235, 253, .14);
+  font-weight: 600;
+}
+
+html.liquid-glass-local :is(.main-trackList-trackListRow, .main-yourLibraryX-listItem)[aria-selected="true"] {
+  background: var(--lg-selection);
+  box-shadow: inset 0 0 0 1px rgba(168, 213, 255, .16);
+}
+
+html.liquid-glass-local :is(.e-10860-chip, .e-10860-legacy-chip__inner) {
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 140ms ease;
+}
+
+html.liquid-glass-local :is(.e-10860-chip[aria-checked="true"],
+  .e-10860-chip[aria-pressed="true"], .e-10860-legacy-chip__inner--selected) {
+  background: #cbe5ff;
+  color: #152e45;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+html.liquid-glass-local :is(.e-10860-input, .e-10860-form-input,
+  .main-playlistEditDetailsModal-titleInput) {
+  background: rgba(16, 24, 35, .3);
+  border-radius: 9px;
+  color: #f6f8fc;
+  box-shadow: inset 0 0 0 1px rgba(221, 236, 255, .2);
+  font-family: var(--encore-body-font-stack);
+}
+
+html.liquid-glass-local :is(.e-10860-field-group, .e-10860-search-field) > .e-10860-input {
+  background: transparent;
+  box-shadow: none;
+}
+
+html.liquid-glass-local :is(.e-10860-form-toggle__wrapper, .x-toggle-indicatorWrapper) {
+  background: rgba(231, 239, 253, .20);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,.16);
+}
+
+html.liquid-glass-local .e-10860-form-toggle input:checked + .e-10860-form-toggle__wrapper,
+html.liquid-glass-local input:checked ~ .x-toggle-indicatorWrapper {
+  background: #64a9eb;
+}
+
+html.liquid-glass-local :is(.e-10860-form-toggle__indicator, .x-toggle-indicator) {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.26);
+}
+
+html.liquid-glass-local .main-contextMenu-menu {
+  padding: 5px;
+  border-radius: 12px;
+}
+
+html.liquid-glass-local .main-contextMenu-menuItemButton {
+  border-radius: 6px;
+  font-family: var(--encore-body-font-stack);
+}
+
+html.liquid-glass-local .main-contextMenu-menuItemButton:is(:hover, :focus-visible) {
+  background: #397cbd;
+  color: #fff;
+}
+
+html.liquid-glass-local :is(.spicetify-button, .spicetify-manager-cta) {
+  border-radius: 9px;
+  font-family: var(--encore-body-font-stack);
+}
+
+html.liquid-glass-local .x-settings-row {
+  border-bottom: 1px solid rgba(225, 238, 255, .07);
+}
+
+html.liquid-glass-local .x-settings-section {
+  padding: 18px;
+}
+
+/* Only visible home banners receive spacing; dismissed ads leave no empty block. */
+html.liquid-glass-local [data-testid="home-ads-container"]:has([data-testid="home-ad-card"]) {
+  margin-block-end: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.liquid-glass-local :is(.e-10860-chip, .e-10860-legacy-chip__inner) { transition: none; }
+}
+
+/* The appearance preference changes materials without altering content artwork. */
+html.liquid-glass-local { color-scheme: dark; }
+html.liquid-glass-local .lg-settings-dialog select {
+  display: block;
+  width: 100%;
+  margin: 0 0 24px;
+  padding: 10px 12px;
+  font: inherit;
+  color: #f5f7fb;
+  background: #303d4f;
+  border: 1px solid var(--lg-line);
+  border-radius: 10px;
+}
+
+html.liquid-glass-local[data-lg-mode="light"] {
+  color-scheme: light;
+  --lg-glass: rgba(250, 250, 249, var(--lg-glass-alpha, .72));
+  --lg-surface: rgba(255, 255, 255, var(--lg-panel-alpha, .86));
+  --lg-line: rgba(40, 61, 89, .18);
+  --lg-edge: inset 0 1px 0 rgba(255,255,255,.85), inset 0 -1px 0 rgba(255,255,255,.3);
+  --lg-shadow: 0 5px 18px rgba(37, 57, 81, .10);
+  --lg-highlight: rgba(31, 73, 116, .08);
+  --lg-accent: #0067c0;
+  --lg-selection: rgba(0, 105, 210, .13);
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] .Root__top-container {
+  background: radial-gradient(ellipse at 15% 0%, rgba(255, 255, 255, .8), transparent 65%),
+    radial-gradient(ellipse at 100% 100%, rgba(222, 218, 211, .24), transparent 65%), #eeefef;
+}
+html.liquid-glass-local[data-lg-mode="light"],
+html.liquid-glass-local[data-lg-mode="light"] :is(.encore-light-theme, .encore-base-set, .encore-app-frame-set),
+html.liquid-glass-local[data-lg-mode="light"] .encore-light-theme .encore-base-set {
+  --background-base: transparent;
+  --background-highlight: rgba(35, 66, 104, .08);
+  --background-press: rgba(35, 66, 104, .14);
+  --background-elevated-base: #f4f7fb;
+  --background-elevated-highlight: #e6edf5;
+  --background-elevated-press: #d8e3ef;
+  --background-tinted-base: rgba(35, 66, 104, .06);
+  --background-tinted-highlight: rgba(35, 66, 104, .11);
+  --background-tinted-press: rgba(35, 66, 104, .17);
+  --text-base: #172534;
+  --text-subdued: #46596c;
+  --text-bright-accent: #0067c0;
+  --text-negative: #b42632;
+  --text-warning: #805300;
+  --text-positive: #147044;
+  --essential-base: #27394c;
+  --essential-subdued: #52667c;
+  --essential-bright-accent: #0067c0;
+  --essential-negative: #b42632;
+  --essential-warning: #805300;
+  --essential-positive: #147044;
+  --decorative-base: #91a4b9;
+  --decorative-subdued: #c6d1df;
+  color-scheme: light;
+}
+html.liquid-glass-local[data-lg-mode="light"] .encore-bright-accent-set {
+  --background-base: #0876d5;
+  --background-highlight: #0066bd;
+  --background-press: #0058a5;
+  --text-base: #fff;
+  --essential-base: #fff;
+}
+/* Image overlays and editorial hero cards retain white foregrounds. */
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-entityHeader-container,
+  [data-testid="home-ad-card"], .main-gridContainer-gridContainer [data-testid="card-image"],
+  .main-nowPlayingView-coverArt, .main-nowPlayingView-artistOnTour,
+  .main-browse-browseCard, .main-nowPlayingView-artistBio) {
+  --text-base: #fff;
+  --text-subdued: #e0e6ef;
+  --essential-base: #fff;
+  --essential-subdued: #e0e6ef;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-topBar-searchBar,
+  .spicetify-searchbar, .spicetify-select) { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] .main-topBar-searchBar::placeholder { color: #52667c; }
+html.liquid-glass-local[data-lg-mode="light"] .main-globalNav-navLink:hover { background-color: rgba(214, 229, 245, .9); }
+html.liquid-glass-local[data-lg-mode="light"] .main-topBar-overlay { background: rgba(238, 245, 253, .12); }
+html.liquid-glass-local[data-lg-mode="light"] :is(button, a, input, select, [role="button"]):focus-visible {
+  outline-color: #0067c0;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-contextMenu-menu,
+  .e-10860-popover, .e-10860-legacy-popover,
+  .main-playlistEditDetailsModal-container, .main-trackCreditsModalV2-container,
+  .e-10860-dialog-alert, .e-10860-dialog-confirmation, .e-10860-dialog-full-screen,
+  .spicetify-dialog, .spicetify-manager-fallback,
+  .spicetify-store-panel:not(.spicetify-store-panel--anchored)) {
+  background: linear-gradient(rgba(250,252,255,.82), rgba(250,252,255,.82)), var(--lg-glass);
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.e-10860-tooltip, .e-10860-legacy-tooltip) {
+  background: #f5f8fc;
+  color: #172534;
+  border: 1px solid var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.spicetify-store-page, .spicetify-manager-page) {
+  --spice-main: #f4f8fd;
+  --spice-card: rgba(255,255,255,.4);
+  --spice-text: #172534;
+  --spice-subtext: #46596c;
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.spicetify-store-card, .spicetify-manager-module, .x-settings-section) {
+  background: rgba(255,255,255,.32);
+  box-shadow: inset 0 0 0 1px var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-trackList-trackListHeaderRow, .x-settings-section h2) {
+  color: #46596c;
+  border-bottom-color: var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-settings-row { border-bottom-color: var(--lg-line); }
+html.liquid-glass-local[data-lg-mode="light"] :is(.e-10860-input, .e-10860-form-input,
+  .main-playlistEditDetailsModal-titleInput) {
+  background: rgba(255,255,255,.55);
+  color: #172534;
+  box-shadow: inset 0 0 0 1px var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.e-10860-field-group, .e-10860-search-field) > .e-10860-input {
+  background: transparent;
+  box-shadow: none;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.e-10860-form-toggle__wrapper, .x-toggle-indicatorWrapper) {
+  background: rgba(59, 79, 104, .25);
+}
+html.liquid-glass-local[data-lg-mode="light"] .e-10860-form-toggle input:checked + .e-10860-form-toggle__wrapper,
+html.liquid-glass-local[data-lg-mode="light"] input:checked ~ .x-toggle-indicatorWrapper { background: #0876d5; }
+html.liquid-glass-local[data-lg-mode="light"] :is(.e-10860-chip[aria-checked="true"],
+  .e-10860-chip[aria-pressed="true"], .e-10860-legacy-chip__inner--selected) {
+  background: #0876d5;
+  color: #fff;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog {
+  color-scheme: light;
+  color: #172534;
+  background: linear-gradient(rgba(250,252,255,.6), rgba(250,252,255,.6)), var(--lg-glass);
+  box-shadow: var(--lg-edge), 0 24px 80px rgba(39,57,78,.2);
+}
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog::backdrop { background: rgba(39,57,78,.25); }
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog :is(p, output) { color: #46596c; }
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog select {
+  color: #172534;
+  background: #f4f7fb;
+}
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog input[type="range"] { accent-color: #0876d5; }
+html.liquid-glass-local[data-lg-mode="light"] .lg-settings-dialog button { background: #0876d5; color: #fff; }
+/* ivLyrics owns its appearance selection and keeps readable dark settings independently. */
+html.liquid-glass-local[data-lg-mode="light"] .ivlyrics-settings-modal-shell:has(#ivLyrics-config-container:not([data-ui-theme="light"])) {
+  --lg-glass: rgba(43,49,59,.94);
+  --lg-line: rgba(235,241,250,.22);
+  color-scheme: dark;
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local[data-lg-mode="light"] {
+    --lg-glass: #edf3fa;
+    --lg-surface: #f9fbfe;
+    --lg-line: #8596aa;
+    --lg-blur: none;
+  }
+  html.liquid-glass-local[data-lg-mode="light"] .bQetA_KiP9n0DQVcGa7m { background: #edf3fa; }
+}
+@supports not (backdrop-filter: blur(1px)) {
+  html.liquid-glass-local[data-lg-mode="light"] { --lg-glass: #edf3fa; --lg-surface: #f9fbfe; }
+}
+
+/* Spotify paints these gradients independently of its Encore surface tokens. */
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-contextItemInfo::before {
+  background: linear-gradient(rgba(244,248,253,0) 0%, rgba(244,248,253,.65) 18%, #f4f8fd 89% 96%);
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-canvasVisualEnhancement::before {
+  background: linear-gradient(rgba(244,248,253,.6) 0%, transparent 30% 70%, #f4f8fd 100%);
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingView-canvasVisualEnhancement::after {
+  background: linear-gradient(rgba(244,248,253,.25) 0%, rgba(244,248,253,.15) 30% 70%, #f4f8fd 95%);
+}
+html.liquid-glass-local .main-dropDown-dropDown { border-radius: 9px; }
+html.liquid-glass-local[data-lg-mode="light"] .main-dropDown-dropDown {
+  background-color: #eaf0f7;
+  color: #27394c;
+  color-scheme: light;
+}
+
+/* Module route hosts sit outside their page and need their own material. */
+html.liquid-glass-local :is(.spicetify-route-page, .spicetify-panel-host) { background: transparent; }
+html.liquid-glass-local :is(.spicetify-route-page, .spicetify-panel-host,
+  .spicetify-dialog, .spicetify-popover-menu, .spicetify-store-panel) {
+  --spice-main: #172230;
+  --spice-main-elevated: #303d4f;
+  --spice-card: rgba(227,237,253,.08);
+  --spice-text: #f4f7fb;
+  --spice-subtext: #c6d1df;
+  --spice-rgb-text: 244,247,251;
+  --spice-button: #bedfff;
+  --spice-button-text: #102c44;
+  --spice-button-active: #a0d2ff;
+  --spice-rgb-button: 160,210,255;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.spicetify-route-page, .spicetify-panel-host,
+  .spicetify-dialog, .spicetify-popover-menu, .spicetify-store-panel) {
+  --spice-main: #f4f8fd;
+  --spice-main-elevated: #edf3fa;
+  --spice-card: rgba(255,255,255,.4);
+  --spice-text: #172534;
+  --spice-subtext: #46596c;
+  --spice-rgb-text: 23,37,52;
+  --spice-button: #0876d5;
+  --spice-button-text: #fff;
+  --spice-button-active: #0067c0;
+  --spice-rgb-button: 8,118,213;
+  --spice-highlight: #edf3fa;
+}
+html.liquid-glass-local[data-lg-mode="light"] .spicetify-store-card .spicetify-store-card-fab {
+  background: #0876d5;
+  color: #fff;
+}
+html.liquid-glass-local[data-lg-mode="light"] .spicetify-store-search { background: rgba(255,255,255,.5); }
+html.liquid-glass-local[data-lg-mode="light"] .SaGoTW0qLhz7mbVG2pol {
+  background: rgba(225,235,247,.8);
+  box-shadow: inset 0 0 0 1px var(--lg-line);
+}
+
+/* Content sections can carry an explicit dark set even when the app root is light. */
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-shelf-titleWrapper,
+  .view-homeShortcutsGrid-shortcuts, .main-trackList-trackListRow,
+  .main-trackList-trackListHeaderRow, .main-home-filterChipsContainer) {
+  --text-base: #172534;
+  --text-subdued: #46596c;
+  --essential-base: #27394c;
+  --essential-subdued: #52667c;
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-shelf-titleWrapper,
+  .view-homeShortcutsGrid-shortcuts, .main-trackList-trackListRow) .encore-internal-color-text-base {
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-shelf-titleWrapper,
+  .view-homeShortcutsGrid-shortcuts, .main-trackList-trackListRow) .encore-internal-color-text-subdued {
+  color: #46596c;
+}
+html.liquid-glass-local[data-lg-mode="light"] :is(.main-trackList-rowTitle, .main-trackList-trackName) { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] .main-entityHeader-headerText {
+  --text-base: #fff;
+  --text-subdued: #e0e6ef;
+  color: #fff;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-entityHeader-headerText :is(.encore-internal-color-text-base,
+  .main-entityHeader-titleText, .main-entityHeader-title, .main-entityHeader-titleInner) { color: #fff; }
+html.liquid-glass-local[data-lg-mode="light"] .main-entityHeader-headerText .encore-internal-color-text-subdued { color: #e0e6ef; }
+/* This absolute layer belongs below the hero and must not darken list controls. */
+html.liquid-glass-local[data-lg-mode="light"] :is(.M7ECcaA17LC8UqL2GKVD,
+  .main-playlist-actionBarBackground-background, .dqwQhIudKoD98eWJzj5E) {
+  background: linear-gradient(rgba(241,247,254,.88), transparent) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .bQetA_KiP9n0DQVcGa7m {
+  --text-base: #172534;
+  --text-subdued: #46596c;
+  --essential-base: #27394c;
+  --essential-subdued: #52667c;
+}
+html.liquid-glass-local[data-lg-mode="light"] .bQetA_KiP9n0DQVcGa7m :is(.main-globalNav-navLink,
+  .main-globalNav-navLinkActive, .main-globalNav-navLink:hover) { color: #27394c; }
+html.liquid-glass-local[data-lg-mode="light"] .main-trackList-rowMainContentTitle { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] .main-trackList-trackListRow:is(:hover, [aria-selected="true"])
+  :is(.h0Bl8QAoHwVgKLXrvjGE a, .Xn3SJClo6kZtw6iAZuKe, .Xn3SJClo6kZtw6iAZuKe a,
+    .main-trackList-rowSectionEnd, .dXezRjWDksvHkq4M37C3, .kUy5lUHqsgfKho38WJwr) { color: #27394c; }
+html.liquid-glass-local[data-lg-mode="light"] .OjAZ1Rnt5EpGTiBqGLg2 .main-trackList-rowMainContentTitle { color: #0067c0; }
+html.liquid-glass-local[data-lg-mode="light"] .playlist-playlist-actionBarBackground-background {
+  background: linear-gradient(rgba(241,247,254,.88), transparent) !important;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-shelf-titleWrapper :is(h1, h2, [data-testid="see-all-link"]) { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingBar-container {
+  --text-base: #172534;
+  --text-subdued: #46596c;
+  --essential-base: #27394c;
+  --essential-subdued: #52667c;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-nowPlayingBar-container .progress-bar {
+  --bg-color: rgba(39,57,76,.2);
+  --mg-color: rgba(39,57,76,.5);
+  --fg-color: #52667c;
+  --is-active-fg-color: #0876d5;
+}
+html.liquid-glass-local[data-lg-mode="light"] .x-filterBox-searchIconContainer { color: #52667c; }
+
+/* Search and sorting controls use literal white independently of the color set. */
+html.liquid-glass-local[data-lg-mode="light"] :is(.x-filterBox-expandButton,
+  .x-filterBox-expandButton:hover, .x-filterBox-expandButton:focus,
+  .x-filterBox-filterInput, .x-sortBox-sortDropdown,
+  .x-sortBox-sortDropdown:hover, .x-sortBox-sortDropdown:focus) { color: #46596c; }
+html.liquid-glass-local[data-lg-mode="light"] .x-filterBox-filterInput { background-color: rgba(39,57,76,.08); }
+html.liquid-glass-local[data-lg-mode="light"] .x-filterBox-filterInput::placeholder { color: #52667c; }
+html.liquid-glass-local[data-lg-mode="light"] .x-filterBox-expandButton:is(:hover, :focus) { background-color: rgba(39,57,76,.08); }
+html.liquid-glass-local[data-lg-mode="light"] .gIAMIR5pjUQrlZ8JTQ87 a { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] .view-homeShortcutsGrid-shortcut .view-homeShortcutsGrid-main,
+html.liquid-glass-local[data-lg-mode="light"] .view-homeShortcutsGrid-name { color: #172534; }
+html.liquid-glass-local[data-lg-mode="light"] :is(.kS9ybJVUDlfs_4RLFhwR, .RnOSBfAZBALn6I8UbVnp, [data-shelf="carousel"]) {
+  --carousel-start-chevron-gradient: rgba(241,247,254,.85);
+  --carousel-end-chevron-gradient: rgba(241,247,254,.85);
+}
+
+/* Playback controls retain literal dark-theme colors outside Encore tokens. */
+html.liquid-glass-local[data-lg-mode="light"] .main-genericButton-button {
+  color: #46596c;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-genericButton-button:is(:hover, :focus-visible) {
+  color: #172534;
+}
+html.liquid-glass-local[data-lg-mode="light"] .main-genericButton-button.ZfsMQKTLl695iPvUo3GK {
+  color: #0067c0;
+}
+html.liquid-glass-local[data-lg-mode="light"] .progress-bar {
+  --bg-color: rgba(39,57,76,.20);
+  --mg-color: rgba(39,57,76,.50);
+  --fg-color: #52667c;
+  --is-active-fg-color: #0067c0;
+}

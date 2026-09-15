@@ -1,0 +1,169 @@
+/* These route surfaces retain fixed palettes in Spotify 1.3.0. */
+html.liquid-glass-local {
+  --lg-surface-text: #f4f7fb;
+  --lg-surface-subtext: #c6d1df;
+  --lg-popup-material: rgba(37, 47, 62, .94);
+  --lg-field-material: rgba(227, 237, 253, .10);
+}
+html.liquid-glass-local[data-lg-mode="light"] {
+  --lg-surface-text: #172534;
+  --lg-surface-subtext: #46596c;
+  --lg-popup-material: rgba(246, 249, 255, .96);
+  --lg-field-material: rgba(35, 66, 104, .07);
+}
+
+/* News cards otherwise restore an opaque background with an important rule. */
+html.liquid-glass-local :is(.WNJCHYJTMjdKYLDjCL8m, .KGvvoifNBAHXlHkOHAA0) {
+  background-color: var(--lg-field-material) !important;
+  border: 1px solid var(--lg-line);
+  border-radius: 14px;
+  color: var(--lg-surface-text);
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+}
+html.liquid-glass-local :is(.WNJCHYJTMjdKYLDjCL8m, .KGvvoifNBAHXlHkOHAA0):is(:hover, :focus-within) {
+  background-color: var(--lg-highlight) !important;
+}
+html.liquid-glass-local :is(.FFMIxCdjTsPV8aspOkCq, .ZjIxHMtAmSMfYJho8Lzh, .euvAKu6KdIo0m3wP3FPj span) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local :is(.P6AmSYr6SrFkMl2v0YCg, .m7mfsYnai6XbNqRUtsv3) { color: var(--lg-surface-subtext); }
+html.liquid-glass-local :is(.P6AmSYr6SrFkMl2v0YCg, .m7mfsYnai6XbNqRUtsv3):is(:hover, :focus) { color: var(--lg-surface-text); }
+html.liquid-glass-local .lh1DGz1dal79HbzcUZNp { border-color: var(--lg-line); }
+
+html.liquid-glass-local .ddcxQGsTMWwYqpxwXwXN {
+  background-color: var(--lg-field-material);
+  border: 1px solid var(--lg-line);
+  border-radius: 16px;
+}
+/* The native noise gradient ends in solid black even when its base token changes. */
+html.liquid-glass-local .playlist-playlist-actionBarBackground-background {
+  --color-from: rgba(28, 39, 55, .22);
+  --color-to: transparent;
+  --dither: none;
+}
+html.liquid-glass-local[data-lg-mode="light"] .playlist-playlist-actionBarBackground-background { --color-from: rgba(235, 243, 252, .28); }
+
+html.liquid-glass-local :is(.profile-userEditDetails-container,
+  .main-embedWidgetGenerator-container, .R0PgYTc790Nk9AgRbvYn,
+  .nn9CWFDxqwC2qA71jyFB, .ct8mi1psEswLO04SRaLq,
+  .uVs9bS_wgI3Iv3XJdIyK, .MHYsdszRDVRoGsmDZaLX) {
+  background: var(--lg-popup-material);
+  color: var(--lg-surface-text);
+  border: 1px solid var(--lg-line);
+  border-radius: 18px;
+  box-shadow: var(--lg-edge), var(--lg-shadow);
+  backdrop-filter: var(--lg-blur);
+}
+html.liquid-glass-local .profile-userEditDetails-container {
+  --user-edit-surface: var(--lg-popup-material);
+  --user-edit-text-color: var(--lg-surface-text);
+  --user-edit-label-color: var(--lg-surface-subtext);
+  --user-edit-input-bg: var(--lg-field-material);
+  --user-edit-input-text: var(--lg-surface-text);
+  --user-edit-input-focus-border: var(--lg-accent);
+  --user-edit-input-focus-bg: var(--lg-highlight);
+  --user-edit-close-color: var(--lg-surface-subtext);
+  --user-edit-close-hover: var(--lg-highlight);
+  --user-edit-close-active: var(--lg-selection);
+  --user-edit-disclaimer-color: var(--lg-surface-subtext);
+  --user-edit-header-bg: var(--lg-popup-material);
+  --user-edit-header-border: var(--lg-line);
+}
+html.liquid-glass-local :is(.main-playlistEditDetailsModal-descriptionTextarea,
+  .main-embedWidgetGenerator-darkControl, .jx0qmvOt1qngChNQ8o7N,
+  .Pn3YKX4mD7K9v2BBuyFD .main-embedWidgetGenerator-code) {
+  background: var(--lg-field-material);
+  color: var(--lg-surface-text);
+  border-radius: 10px;
+}
+html.liquid-glass-local .Pn3YKX4mD7K9v2BBuyFD { background: var(--lg-popup-material); }
+html.liquid-glass-local :is(.main-embedWidgetGenerator-contentFooter,
+  .main-embedWidgetGenerator-closeBtn, .main-embedWidgetGenerator-terms,
+  .main-playlistEditDetailsModal-textElementLabel, .wqvPZsr7R4qs42PVwPzt) { color: var(--lg-surface-subtext); }
+html.liquid-glass-local .main-embedWidgetGenerator-dimensionsContainer { color: var(--lg-surface-text); }
+html.liquid-glass-local .main-playlistEditDetailsModal-textElementLabel:before { background: var(--lg-popup-material); }
+
+/* Friend activity text is hardcoded independently of the Encore theme tokens. */
+html.liquid-glass-local :is(.x0SJimu29wxYRzlTIQI0, .nimcIcr9_aXcNl6sQFgQ,
+  .sRjA9HxkYXSnZJDTGPZR .ew2i4b7x44k3xqklErxw,
+  .knrAgtzK7F9YquYFL1UF a) { color: var(--lg-surface-text); }
+html.liquid-glass-local :is(.OvWu0gu5wkOjuQdIQ0e1,
+  .sRjA9HxkYXSnZJDTGPZR .Qq0rPwOjuyfgGQTNvEwo,
+  .sRjA9HxkYXSnZJDTGPZR .qgcjg9YS8chhh1WY2XyT,
+  .sRjA9HxkYXSnZJDTGPZR .knrAgtzK7F9YquYFL1UF a,
+  .sRjA9HxkYXSnZJDTGPZR .ew2i4b7x44k3xqklErxw a,
+  .Z3fba9Y79O0012UvoAAA .zFyO7QV_4EAZkmj45jZF) { color: var(--lg-surface-subtext); }
+html.liquid-glass-local .aWrPEdmQfRl9D1N7BoG_ { background: var(--lg-field-material); }
+
+/* News title links set their own foreground after the card inherits its palette. */
+html.liquid-glass-local :is(.WNJCHYJTMjdKYLDjCL8m, .KGvvoifNBAHXlHkOHAA0) h3,
+html.liquid-glass-local :is(.WNJCHYJTMjdKYLDjCL8m, .KGvvoifNBAHXlHkOHAA0) h3 a,
+html.liquid-glass-local :is(.WNJCHYJTMjdKYLDjCL8m, .KGvvoifNBAHXlHkOHAA0) h3 a:is(:hover, :focus, :active) {
+  color: var(--lg-surface-text);
+}
+
+/* Legacy menu buttons and nested Encore sets each supply their own foreground. */
+html.liquid-glass-local .main-contextMenu-menu,
+html.liquid-glass-local .main-contextMenu-menu :is(.encore-dark-theme, .encore-light-theme, .encore-base-set) {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  --essential-base: var(--lg-surface-text);
+  --essential-subdued: var(--lg-surface-subtext);
+  --text-bright-accent: var(--lg-accent);
+}
+html.liquid-glass-local .main-contextMenu-menu .main-contextMenu-menuItemButton {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local .main-contextMenu-menu .main-contextMenu-menuItemButton[aria-checked="true"] {
+  color: var(--lg-accent);
+}
+html.liquid-glass-local .main-contextMenu-menu .main-contextMenu-menuItemButton:is(:hover, :focus, [aria-expanded="true"]):not(.l7XabbfpobRNm8SpemYx):not([aria-disabled="true"]) {
+  --text-base: #fff;
+  --text-subdued: rgba(255,255,255,.88);
+  --essential-base: #fff;
+  --essential-subdued: rgba(255,255,255,.88);
+  color: #fff;
+  background: #397cbd;
+}
+html.liquid-glass-local .main-contextMenu-menu .main-contextMenu-menuItemButton :is(.encore-internal-color-text-base, .I4V66eDFnlUcMR7MUV_y) {
+  color: inherit;
+}
+html.liquid-glass-local .main-contextMenu-menu .main-contextMenu-menuItemButton:is(.l7XabbfpobRNm8SpemYx, [aria-disabled="true"]) {
+  color: var(--lg-surface-subtext);
+  opacity: .5;
+  background: transparent;
+}
+
+/* Sticky entity titles use a fixed white declaration in the native stylesheet. */
+html.liquid-glass-local .main-topBar-background {
+  background: var(--lg-popup-material) !important;
+}
+html.liquid-glass-local .main-entityHeader-topbarTitle {
+  color: var(--lg-surface-text) !important;
+}
+html.liquid-glass-local .main-card-cardTitle,
+html.liquid-glass-local .main-card-cardTitle a {
+  color: var(--lg-surface-text);
+}
+
+/* Native entity content must occlude the stationary parallax artwork as it scrolls. */
+html.liquid-glass-local {
+  --lg-content-plane: rgba(32, 34, 38, .78);
+}
+html.liquid-glass-local[data-lg-mode="light"] {
+  --lg-content-plane: rgba(245, 246, 247, .78);
+}
+html.liquid-glass-local .idQcRYCjAFYbKngo13bt {
+  background: var(--lg-content-plane);
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+html.liquid-glass-local :is(.main-topBar-background, .Root__right-sidebar) {
+  backdrop-filter: var(--lg-blur);
+  -webkit-backdrop-filter: var(--lg-blur);
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  html.liquid-glass-local { --lg-content-plane: #202226; }
+  html.liquid-glass-local[data-lg-mode="light"] { --lg-content-plane: #f5f6f7; }
+}

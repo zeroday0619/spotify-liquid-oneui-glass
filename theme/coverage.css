@@ -1,0 +1,56 @@
+/* Encore card text occupies its own column outside the artwork surface. */
+html.liquid-glass-local[data-lg-mode] .e-10860-card__column {
+  --text-base: var(--lg-surface-text);
+  --text-subdued: var(--lg-surface-subtext);
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode] .e-10860-card__column :is(
+  .e-10860-card-title, [data-encore-id="cardTitle"], .encore-internal-color-text-base) {
+  color: var(--lg-surface-text);
+}
+html.liquid-glass-local[data-lg-mode] .e-10860-card__column :is(
+  [data-encore-id="cardSubtitle"], .encore-internal-color-text-subdued) {
+  color: var(--lg-surface-subtext);
+}
+
+/* The native global search wrapper has stronger hover and focus selectors. */
+html.liquid-glass-local[data-lg-mode] .f0G3CvZVXIxBqmSarCt9 .main-topBar-searchBar,
+html.liquid-glass-local[data-lg-mode] .f0G3CvZVXIxBqmSarCt9:hover .main-topBar-searchBar {
+  background: var(--lg-field-material);
+  box-shadow: inset 0 0 0 1px var(--lg-line);
+}
+html.liquid-glass-local[data-lg-mode] .f0G3CvZVXIxBqmSarCt9 .main-topBar-searchBar:focus {
+  background: var(--lg-popup-material);
+  box-shadow: inset 0 0 0 2px var(--lg-accent);
+}
+
+/* Native edit fields retain literal colors independently of Encore mode. */
+html.liquid-glass-local[data-lg-mode] :is(
+  .main-playlistEditDetailsModal-titleInput,
+  .main-playlistEditDetailsModal-descriptionTextarea,
+  .e-10860-input, .e-10860-form-input, .spicetify-searchbar, .spicetify-select) {
+  color: var(--lg-surface-text);
+  background-color: var(--lg-field-material);
+  border-color: var(--lg-line);
+  caret-color: var(--lg-accent);
+}
+html.liquid-glass-local[data-lg-mode] :is(
+  .main-playlistEditDetailsModal-titleInput,
+  .main-playlistEditDetailsModal-descriptionTextarea,
+  .e-10860-input, .e-10860-form-input, .spicetify-searchbar)::placeholder {
+  color: var(--lg-surface-subtext);
+  opacity: 1;
+}
+html.liquid-glass-local[data-lg-mode] :is(.e-10860-field-group, .e-10860-search-field) > .e-10860-input {
+  background: transparent;
+}
+
+/* The library's scrollbar alphabet hint supplies an independent dark palette. */
+html.liquid-glass-local[data-lg-mode] .main-yourLibraryX-libraryItemContainer
+  .os-scrollbar-vertical:active .os-scrollbar-handle[data-group-by]::after {
+  --generic-tooltip-background-color: var(--lg-popup-material);
+  color: var(--lg-surface-text);
+  background-color: var(--lg-popup-material);
+  box-shadow: var(--lg-shadow);
+  border: 1px solid var(--lg-line);
+}
